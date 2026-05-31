@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/tlacuaches808.html" }
+    { "source": "/", "destination": "/tlacuaches808" }
   ]
 }
+

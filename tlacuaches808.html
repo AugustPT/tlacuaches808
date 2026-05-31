@@ -371,6 +371,212 @@
         grid-template-columns: 1fr !important;
       }
     }
+    
+    /* MOBILE-NATIVE PREMIUM ADJUSTMENTS (max-width: 600px) */
+    @media(max-width: 600px) {
+      body {
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      /* Active tap scaling tactile feedback simulating physical buttons */
+      .btn:active, .btn-add:active, .btnQty:active, .walletBtn:active, .tab:active, .radioBtn:active, .btnClose:active {
+        transform: scale(0.96) !important;
+      }
+
+      /* Tap target standard safe zone */
+      .btn, .btn-add, .walletBtn, .tipBtn {
+        min-height: 48px;
+      }
+
+      /* App-like Sticky Top Nav Header */
+      .nav {
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        width: 100vw !important;
+        border-radius: 0 !important;
+        border-left: 0 !important; border-right: 0 !important; border-top: 0 !important;
+        border-bottom: 1px solid rgba(23, 11, 5, 0.08) !important;
+        padding: 10px 16px !important;
+        background: rgba(255, 246, 225, 0.94) !important;
+        box-shadow: 0 4px 20px rgba(44,17,4,0.06) !important;
+      }
+      .brand span {
+        display: inline-block !important;
+        font-size: 17px !important;
+      }
+      .navlinks {
+        display: none !important; /* Elegant header cleanup */
+      }
+      .navCartBtn {
+        padding: 6px 14px !important;
+        font-size: 13px !important;
+        height: 38px !important;
+        min-height: 38px !important;
+      }
+
+      /* Bottom Sheet Drawer mimicking iOS/Android sheets */
+      .cartDrawer {
+        top: auto !important;
+        bottom: -95vh !important;
+        right: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 88vh !important;
+        border-left: 0 !important;
+        border-top: 1px solid rgba(255,255,255,0.14) !important;
+        border-radius: 28px 28px 0 0 !important;
+        box-shadow: 0 -12px 40px rgba(0,0,0,0.3) !important;
+        transition: bottom 0.38s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+      .cartDrawer.open {
+        bottom: 0 !important;
+      }
+
+      /* Mobile Grab Handle decoration */
+      .mobileGrabHandle {
+        display: block !important;
+        width: 44px; height: 5px;
+        background: rgba(255,255,255,0.22);
+        border-radius: 99px;
+        margin: 10px auto 0;
+        flex-shrink: 0;
+      }
+
+      /* Mobile Header constraints */
+      .drawerHeader {
+        padding: 14px 20px 10px !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        align-items: center !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+      }
+      .drawerHeader h2 {
+        font-size: 28px !important;
+        margin: 0 !important;
+      }
+      .btnClose {
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        font-size: 28px;
+      }
+
+      /* Smooth inertia scrolling on carts */
+      .drawerBody {
+        -webkit-overflow-scrolling: touch;
+        padding: 18px !important;
+        gap: 16px !important;
+      }
+
+      /* Tactile Quantity buttons */
+      .qtyControls {
+        gap: 14px !important;
+      }
+      .btnQty {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 18px !important;
+        border-color: rgba(255,255,255,0.3) !important;
+      }
+      .qtyValue {
+        font-size: 17px !important;
+        min-width: 24px !important;
+      }
+
+      /* Horizontal scrolling category filters */
+      .tabs {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 6px;
+        gap: 8px !important;
+        margin-bottom: 14px !important;
+      }
+      .tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .tab {
+        flex: 0 0 auto;
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+      }
+
+      /* Stacking layouts */
+      .menuGrid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+      .split, .visit {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .feature {
+        min-height: 380px !important;
+      }
+
+      /* Hero mobile layout adjustments */
+      .hero {
+        padding-top: 96px !important;
+        padding-bottom: 40px !important;
+      }
+      .heroGrid {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+      }
+      .foodStage {
+        min-height: 480px !important;
+      }
+      .heroPhoto {
+        width: 100% !important;
+        border-radius: 28px !important;
+      }
+      .orbit {
+        display: none !important; /* Prevents visual clutter on compact screens */
+      }
+      h1 {
+        font-size: 54px !important;
+        line-height: 0.88 !important;
+      }
+
+      /* Touch Checkout Forms */
+      #customCheckoutPage {
+        padding-top: 76px !important;
+        padding-bottom: 90px !important;
+      }
+      .checkoutPanel {
+        padding: 18px !important;
+        border-radius: 20px !important;
+      }
+      .checkoutGrid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+      }
+      .checkoutHeader {
+        font-size: 26px !important;
+      }
+
+      /* Floating Bottom Order Strip */
+      .stickyOrder {
+        width: calc(100vw - 24px) !important;
+        bottom: 12px !important;
+        border-radius: 20px !important;
+        padding: 5px !important;
+        box-shadow: 0 12px 36px rgba(23,11,5,0.45) !important;
+      }
+      .stickyOrder span {
+        font-size: 13px !important;
+        padding-left: 10px !important;
+      }
+      .stickyOrder .btn.gold {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+        border-radius: 14px !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -585,20 +791,20 @@
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
                 <div class="inputGroup">
                   <label>First Name</label>
-                  <input type="text" id="chkFirstName" placeholder="Juan" required>
+                  <input type="text" id="chkFirstName" placeholder="Juan" required autocomplete="given-name">
                 </div>
                 <div class="inputGroup">
                   <label>Last Name</label>
-                  <input type="text" id="chkLastName" placeholder="Perez" required>
+                  <input type="text" id="chkLastName" placeholder="Perez" required autocomplete="family-name">
                 </div>
               </div>
               <div class="inputGroup">
                 <label>Phone Number</label>
-                <input type="tel" id="chkPhone" placeholder="(808) 555-0199" required>
+                <input type="tel" id="chkPhone" placeholder="(808) 555-0199" required autocomplete="tel" inputmode="tel">
               </div>
               <div class="inputGroup">
                 <label>Email Address</label>
-                <input type="email" id="chkEmail" placeholder="juan@example.com" required>
+                <input type="email" id="chkEmail" placeholder="juan@example.com" required autocomplete="email" inputmode="email">
               </div>
             </div>
           </div>
@@ -609,20 +815,20 @@
             <div style="display:flex; flex-direction:column; gap:16px; margin-top:8px;">
               <div class="inputGroup">
                 <label>Cardholder Name</label>
-                <input type="text" id="chkCardName" placeholder="Juan Perez" required>
+                <input type="text" id="chkCardName" placeholder="Juan Perez" required autocomplete="cc-name">
               </div>
               <div class="inputGroup">
                 <label>Card Number</label>
-                <input type="text" id="chkCardNumber" placeholder="4111 2222 3333 4444" required>
+                <input type="text" id="chkCardNumber" placeholder="4111 2222 3333 4444" required inputmode="numeric" autocomplete="cc-number">
               </div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
                 <div class="inputGroup">
                   <label>Expiry (MM/YY)</label>
-                  <input type="text" id="chkCardExpiry" placeholder="12/28" required>
+                  <input type="text" id="chkCardExpiry" placeholder="12/28" required inputmode="numeric" autocomplete="cc-exp">
                 </div>
                 <div class="inputGroup">
                   <label>CVV / CVC</label>
-                  <input type="text" id="chkCardCvc" placeholder="123" required>
+                  <input type="text" id="chkCardCvc" placeholder="123" required inputmode="numeric" autocomplete="cc-csc">
                 </div>
               </div>
             </div>
@@ -746,6 +952,7 @@
   <!-- Cart Drawer System -->
   <div class="drawerOverlay" id="drawerOverlay" onclick="closeCart()"></div>
   <div class="cartDrawer" id="cartDrawer">
+    <div class="mobileGrabHandle"></div>
     <div class="drawerHeader">
       <h2 id="drawerTitle">Your Order</h2>
       <button class="btnClose" onclick="closeCart()">&times;</button>
@@ -769,26 +976,26 @@
         
         <div class="inputGroup">
           <label>Your Name</label>
-          <input type="text" id="custName" placeholder="Juan Perez" required>
+          <input type="text" id="custName" placeholder="Juan Perez" required autocomplete="name">
         </div>
         <div class="inputGroup">
           <label>Phone Number</label>
-          <input type="tel" id="custPhone" placeholder="(808) 555-0199" required>
+          <input type="tel" id="custPhone" placeholder="(808) 555-0199" required autocomplete="tel" inputmode="tel">
         </div>
         <div class="inputGroup">
           <label>Email Address</label>
-          <input type="email" id="custEmail" placeholder="juan@example.com" required>
+          <input type="email" id="custEmail" placeholder="juan@example.com" required autocomplete="email" inputmode="email">
         </div>
         
         <!-- Delivery fields (shown conditionally) -->
         <div id="deliveryFields" style="display:none; flex-direction:column; gap:16px;">
           <div class="inputGroup">
             <label>Delivery Address</label>
-            <input type="text" id="custAddress" placeholder="438 Hobron Ln, Apt 100">
+            <input type="text" id="custAddress" placeholder="438 Hobron Ln, Apt 100" autocomplete="street-address">
           </div>
           <div class="inputGroup">
             <label>Zip Code</label>
-            <input type="text" id="custZip" placeholder="96815">
+            <input type="text" id="custZip" placeholder="96815" autocomplete="postal-code" inputmode="numeric">
           </div>
         </div>
         
@@ -798,20 +1005,20 @@
         
         <div class="inputGroup">
           <label>Cardholder Name</label>
-          <input type="text" id="cardName" placeholder="Juan Perez" required>
+          <input type="text" id="cardName" placeholder="Juan Perez" required autocomplete="cc-name">
         </div>
         <div class="inputGroup">
           <label>Card Number</label>
-          <input type="text" id="cardNumber" placeholder="4111 2222 3333 4444" required>
+          <input type="text" id="cardNumber" placeholder="4111 2222 3333 4444" required inputmode="numeric" autocomplete="cc-number">
         </div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
           <div class="inputGroup">
             <label>Expiry (MM/YY)</label>
-            <input type="text" id="cardExpiry" placeholder="12/28" required>
+            <input type="text" id="cardExpiry" placeholder="12/28" required inputmode="numeric" autocomplete="cc-exp">
           </div>
           <div class="inputGroup">
             <label>CVC</label>
-            <input type="text" id="cardCvc" placeholder="123" required>
+            <input type="text" id="cardCvc" placeholder="123" required inputmode="numeric" autocomplete="cc-csc">
           </div>
         </div>
       </div>
